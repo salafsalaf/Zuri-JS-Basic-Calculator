@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Calculator</title>
+</head>
+<body>
+    <script>
+        var operator = prompt("Addition: '+' \nSubtracition: '-' \nMultiplication: 'x' \nDivision: '/'\nEnter Operator: ");
+        var operand1 = parseFloat(prompt("Enter First Operand"));
+        var operand2 = parseFloat(prompt("Enter Second Operand"));
+        var ans = 0.0;
+
+        if(operator==='+' || operator==='-' || operator==='x' || operator==='/'){
+            if(operator==='+')  ans = operand1 + operand2;
+            else if(operator==='-')  ans = operand1 - operand2;
+            else if(operator==='x')  ans = operand1 * operand2;
+            else if(operator==='/')  ans = operand1 / operand2;
+
+            alert(operand1 + " " + operator + " " + operand2 + " = " + ans);
+        }
+        else{
+            alert("Incorrect Operator");
+        }
+    </script>
+</body>
+</html>
